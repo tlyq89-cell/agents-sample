@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-hanken {
+    font-family: 'Hanken Grotesk', sans-serif;
+  }
+  .font-inter {
+    font-family: 'Inter', sans-serif;
+  }
+  .font-mono-code {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f7f9ff;
+  color: #181c21;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c3c5d8;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #737687;
+}
+
+@keyframes flashGain {
+  0% { background-color: rgba(8, 153, 129, 0.18); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flashLoss {
+  0% { background-color: rgba(242, 54, 69, 0.18); }
+  100% { background-color: transparent; }
+}
+
+.flash-green {
+  animation: flashGain 1.2s ease-out;
+}
+
+.flash-red {
+  animation: flashLoss 1.2s ease-out;
+}
